@@ -6,7 +6,18 @@ const Todos = ({ todos, deleteTodo }) => {
         todos.map(todo => {
             return(
                 <div className='collection-item' key={todo.id} >
-                    <span onClick={() => { deleteTodo(todo.id) }} style={{cursor: 'pointer'}}> X </span>
+                    <span 
+                        onClick={() => { deleteTodo(todo.id) }} 
+                        style={
+                            {
+                                cursor: 'pointer', 
+                                color: 'red',
+                                padding: '3px 5px',
+                                paddingLeft: '9px',
+                                margin: '0 10px',
+                                border: '1px solid red',
+                            }
+                        }> X </span>
                     <span>{todo.content}</span>
                 </div>
             )
